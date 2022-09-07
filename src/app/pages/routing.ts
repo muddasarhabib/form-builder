@@ -2,14 +2,21 @@ import { Routes } from '@angular/router';
 
 const Routing: Routes = [
   {
+    path: 'bookings',
+    loadChildren: () =>
+      import('../modules/bookings/bookings.module').then(
+        (m) => m.BookingsModule
+      ),
+  },
+  {
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
-    path: 'clientl',
+    path: 'custom-booking',
     loadChildren: () =>
-      import('../modules/clientl/clientl.module').then((m) => m.ClientlModule),
+      import('../modules/custom-booking/custom-booking.module').then((m) => m.CustomBookingModule),
   },
   {
     path: 'builder',

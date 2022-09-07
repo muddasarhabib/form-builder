@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalConfig } from "src/app/_metronic/partials";
 
 @Component({
-  selector: 'app-clientl',
-  templateUrl: './clientl.component.html'
+  selector: 'app-custom-booking',
+  templateUrl: './custom-booking.component.html'
 })
 export class ClientlComponent implements OnInit {
 

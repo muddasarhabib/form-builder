@@ -25,7 +25,7 @@ import { HeaderMenuComponent } from './components/header/header-menu/header-menu
 import { DrawersModule, DropdownMenusModule, ModalsModule, EngagesModule} from '../partials';
 import {EngagesComponent} from "../partials/layout/engages/engages.component";
 import { ThemeModeModule } from '../partials/layout/theme-mode-switcher/theme-mode.module';
-import { BookingFormBuilderComponent } from '../../modules/clientl/booking-form-builder/booking-form-builder.component';
+import { BookingFormBuilderComponent } from '../../modules/custom-booking/booking-form-builder/booking-form-builder.component';
 
 const routes: Routes = [
   {

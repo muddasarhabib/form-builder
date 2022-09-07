@@ -70,13 +70,15 @@ export class BookingFormBuilderComponent implements OnDestroy, OnInit {
 
   setInitialComponents() {
     const savedForm = localStorage.getItem(bookingForm)
-
+    console.log('defaultBookingComponents', defaultBookingComponents);
+    
+    console.log('dfdf', savedForm);
     if (savedForm !== null) {
       let form = JSON.parse(savedForm);
-      this.form.components = form.components;
+      this.form.components = form.components.length ? form.components : defaultBookingComponents[0].components;
       console.log(form.components)
     } else {
-      this.form.components = defaultBookingComponents;
+      this.form.components = defaultBookingComponents[0].components;
     }
   }
 
@@ -93,6 +95,8 @@ export class BookingFormBuilderComponent implements OnDestroy, OnInit {
   }
 
   saveForm() {
+    console.log('df', this.formio.form);
+    
     localStorage.setItem(bookingForm, JSON.stringify(this.formio.form, null, 4))
     this.showSaveSuccessModal();
   }
