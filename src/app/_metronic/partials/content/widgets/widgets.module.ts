@@ -75,6 +75,23 @@ import { TablesWidget11Component } from './tables/tables-widget11/tables-widget1
 import { TablesWidget12Component } from './tables/tables-widget12/tables-widget12.component';
 import { TablesWidget13Component } from './tables/tables-widget13/tables-widget13.component';
 import { TablesWidget14Component } from './tables/tables-widget14/tables-widget14.component';
+import {
+  DxTabsModule,
+  DxSelectBoxModule,
+  DxDropDownBoxModule,
+  DxTreeViewModule,
+  DxDataGridModule,
+  DxCheckBoxModule,
+  DxPopupModule,
+  DxButtonModule,
+  DxBulletModule,
+  DxTemplateModule,
+  DxTooltipModule
+} from 'devextreme-angular';
+import { ConfigureComponent } from './configure/configure.component';
+import {ConfigureService} from '../widgets/configure/configure.service';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -149,6 +166,7 @@ import { TablesWidget14Component } from './tables/tables-widget14/tables-widget1
     TablesWidget12Component,
     TablesWidget13Component,
     TablesWidget14Component,
+    ConfigureComponent,
   ],
   imports: [
     CommonModule,
@@ -156,6 +174,19 @@ import { TablesWidget14Component } from './tables/tables-widget14/tables-widget1
     InlineSVGModule,
     NgApexchartsModule,
     NgbDropdownModule,
+    DxDataGridModule,
+    DxTabsModule,
+    DxSelectBoxModule,
+    DxDropDownBoxModule,
+    DxTreeViewModule,
+    DxCheckBoxModule,
+    DxPopupModule,
+    DxButtonModule,
+    DxBulletModule,
+    DxTemplateModule,
+    RouterModule,
+    FormsModule,
+    DxTooltipModule
   ],
   exports: [
     // Advanced Tables
@@ -230,5 +261,6 @@ import { TablesWidget14Component } from './tables/tables-widget14/tables-widget1
     TablesWidget13Component,
     TablesWidget14Component,
   ],
+  providers: [ConfigureService]
 })
 export class WidgetsModule {}
